@@ -27,7 +27,7 @@ appium driver install uiautomator2
 ```
 ### Necessário configurar o **`ANDROID_HOME`** e **`JAVA_HOME`** no **`PATH`** do S.O.
 
-### Pelo ***Virtual Device Manager*** do ***Android Studio***, crie um device e execute-o.
+### Pelo ***Virtual Device Manager*** do ***Android Studio***, crie um device.
 
 ### **Capabilities** configuradas no projeto de testes:
 
@@ -42,7 +42,7 @@ appium driver install uiautomator2
 }
 ```
 
-## Comandos de checagens ✅✅
+## Comandos para checagem do ambiente ✅✅
 
 * Se ambiente está OK: **`appium-doctor --android`**
 
@@ -56,7 +56,17 @@ appium driver install uiautomator2
 pip install -r requirements.txt
 ```
 
-## Execução dos Testes 🤖🤖
+## Instruções 📢ℹ️ 
+
+- Inicie o Appium Server com o comando: **`appium`**.
+
+![Alt text](images/appium.png)
+
+- Dê um play no Android Device Virtual.
+
+![Alt text](images/avd.png)
+
+## Execução dos testes 🤖🤖
 
 ```
 robot -d ./logs tests/
