@@ -4,7 +4,7 @@
     <img src="images/robot.png" width="225px">
 </h1>
 
-## Pré-requisitos de ambiente 📋💻
+## Pré-requisitos de ambiente 📋 💻
 
 [Java](https://www.oracle.com/br/java/technologies/downloads/#java11) 11.0.20.
 
@@ -42,7 +42,7 @@ appium driver install uiautomator2
 }
 ```
 
-## Comandos para checagem do ambiente ✅✅
+## Comandos para checagem do ambiente ✅ ✅
 
 * Se ambiente está OK: **`appium-doctor --android`**
 
@@ -50,13 +50,13 @@ appium driver install uiautomator2
 
 * Se o virtual device está ativo / online: **`adb devices`**
 
-## Instalação do projeto 🚀🚀
+## Instalação do projeto 🚀 🚀
 
 ```
 pip install -r requirements.txt
 ```
 
-## Instruções 📢ℹ️ 
+## Instruções 📢 ℹ️ 
 
 - Inicie o Appium Server com o comando: **`appium`**.
 
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ![Alt text](images/avd.png)
 
-## Execução dos testes 🤖🤖
+## Execução dos testes 🤖 🤖
 
 ```
 robot -d ./logs tests/
