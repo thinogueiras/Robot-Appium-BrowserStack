@@ -37,15 +37,14 @@ Navigate To
     Click By Element           ${menu_item}
 
 Go To Item
-    [Arguments]                ${item}        ${text}
+    [Arguments]                ${item}
 
-    Click By Text                     ${item}
-    Wait Until Screen Contains        ${text}
-
-Finish Session
-    Take Screenshot
-    Close Application
+    Click By Text              ${item}
 
 Take Screenshot
     Sleep    1
     Capture Page Screenshot
+
+Finish Session
+    Take Screenshot
+    Close Application

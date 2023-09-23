@@ -8,9 +8,13 @@ Test Teardown               Finish Session
 *** Test Cases ***
 Deve marcar as techs que usam Appium
     Navigate To             Check e Radio
-    Go To Item              Checkbox        Marque as techs que usam Appium
+    Go To Item              Checkbox
+    
+    Wait Until Screen Contains        Marque as techs que usam Appium
 
-    @{techs}                Create List    Ruby    Python    Java    Javascript    C#
+    @{techs}                Create List
+    ...                     Ruby             Python      Java
+    ...                     Javascript       C#          Robot Framework
 
     FOR    ${tech}    IN    @{techs}
         Click By Element    xpath=//android.widget.CheckBox[contains(@text, "${tech}")]    

@@ -9,7 +9,9 @@ Test Teardown               Finish Session
 Deve buscar pelo Chewbacca
     Navigate To             Star Wars
 
-    Go To Item              Busca        Busque aqui
+    Go To Item              Busca
+    
+    Wait Until Screen Contains        Busque aqui
 
     Input Text              id=com.qaxperience.yodapp:id/etSearch        Chewbacca
 

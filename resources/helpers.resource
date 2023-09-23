@@ -25,3 +25,13 @@ Click By Element
 
     Wait Until Element Is Visible         ${element}        ${timeout}
     Click Element                         ${element}
+
+Long Click
+    [Arguments]            ${element}
+
+    Wait Until Screen Contains        CLIQUE LONGO
+
+    ${locator}             Set Variable            ${element}
+    ${positions}           Get Element Location    ${locator}
+
+    Tap With Positions     1000        ${${positions}[x], ${positions}[y]}

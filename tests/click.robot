@@ -1,25 +1,22 @@
 *** Settings ***
 
-Resource                   ../resources/base.resource
+Resource                    ../resources/base.resource
 
-Test Setup                 Start Session
-Test Teardown              Finish Session
+Test Setup                  Start Session
+Test Teardown               Finish Session
 
 *** Test Cases ***
 Deve realizar um clique simples
     Navigate To                  Clique em Botões
-    Go To Item                   Clique simples          Botão clique simples
+    Go To Item                   Clique simples
 
     Click By Text                CLIQUE SIMPLES
-    Wait Until Page Contains     Isso é um clique simples
+    Wait Until Screen Contains   Isso é um clique simples
 
 Deve realizar um clique longo
     Navigate To                  Clique em Botões
-    Go To Item                   Clique longo            Botão clique longo
+    Go To Item                   Clique longo
 
-    ${locator}                   Set Variable            id=com.qaxperience.yodapp:id/long_click
-    ${positions}                 Get Element Location    ${locator}
+    Long Click                   id=com.qaxperience.yodapp:id/long_click
 
-    Tap With Positions           1000        ${${positions}[x], ${positions}[y]}
-
-    Wait Until Page Contains     Isso é um clique longo
+    Wait Until Screen Contains   Isso é um clique longo

@@ -6,7 +6,7 @@ Test Setup                  Start Session
 Test Teardown               Finish Session
 
 *** Variables ***
-${email}                    id=com.qaxperience.yodapp:id/etEmail  
+${email}                    id=com.qaxperience.yodapp:id/etEmail
 ${password}                 id=com.qaxperience.yodapp:id/etPassword
 ${btn_entrar}               id=com.qaxperience.yodapp:id/btnSubmit
 
@@ -14,7 +14,9 @@ ${btn_entrar}               id=com.qaxperience.yodapp:id/btnSubmit
 Deve logar com sucesso
     Navigate To             Formulários
 
-    Go To Item              Login        Olá Padawan, vamos testar o login?
+    Go To Item              Login
+    
+    Wait Until Screen Contains        Olá Padawan, vamos testar o login?
 
     Input Text              ${email}         yoda@qax.com
     Input Text              ${password}      jedi
@@ -26,7 +28,9 @@ Deve logar com sucesso
 Não deve logar com senha incorreta
     Navigate To             Formulários
 
-    Go To Item              Login            Olá Padawan, vamos testar o login?
+    Go To Item              Login            
+    
+    Wait Until Screen Contains        Olá Padawan, vamos testar o login?
 
     Input Text              ${email}         yoda@qax.com
     Input Text              ${password}      test

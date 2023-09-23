@@ -8,7 +8,9 @@ Test Teardown               Finish Session
 *** Test Cases ***
 Deve escolher o nível Jedi
     Navigate To             Formulários
-    Go To Item              Cadastro        Crie sua conta.
+    Go To Item              Cadastro
+    
+    Wait Until Screen Contains        Crie sua conta.
 
     Input Text              id=com.qaxperience.yodapp:id/etUsername        Thiago
     Input Text              id=com.qaxperience.yodapp:id/etEmail           thiago@qax.com

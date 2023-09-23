@@ -9,7 +9,9 @@ Test Teardown               Finish Session
 Deve remover o Darth Vader
     Navigate To             Star Wars
 
-    Go To Item              Lista        Darth Vader
+    Go To Item              Lista
+    
+    Wait Until Screen Contains        Darth Vader
 
     ${positions}            Get Element Location    xpath=//android.widget.TextView[@text="@darthvader"]
 
