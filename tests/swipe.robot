@@ -17,7 +17,7 @@ Deve remover o Darth Vader
 
     ${start_x}              Set Variable        ${positions}[x]
     ${start_y}              Set Variable        ${positions}[y]
-    ${offset_x}             Evaluate            ${positions}[x] - 300
+    ${offset_x}             Evaluate            ${positions}[x] - 500
     ${offset_y}             Set Variable        ${positions}[y]
     
     Swipe                   ${start_x}    ${start_y}    ${offset_x}    ${offset_y}
