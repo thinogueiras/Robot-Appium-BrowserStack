@@ -16,9 +16,7 @@ ${BS_URL}                  hub-cloud.browserstack.com/wd/hub
 
 *** Keywords ***
 Start Session
-    IF  $ENVIRONMENT == 'Local'
-        Start Local Session
-    ELSE IF  $ENVIRONMENT == 'Remoto'
+    IF  $ENVIRONMENT == 'remoto' or $ENVIRONMENT == 'browserstack'    
         Start Remote Session
     ELSE
         Start Local Session
@@ -43,8 +41,8 @@ Start Remote Session
     ...                    platformVersion=12.0
     ...                    deviceName=Samsung Galaxy S22 Ultra
     ...                    autoGrantPermissions=true
-    ...                    name=Yodapp Tests With Robot Framework & Appium
-    ...                    build=browserstack-robot-framework
+    ...                    name=Yodapp Tests with Robot Framework & Appium
+    ...                    build=yodapp-appium-tests
 
     Get Started
 
