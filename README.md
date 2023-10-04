@@ -1,8 +1,8 @@
 # Automação de testes Mobile com Robot Framework e Appium.
 
-<h1>
-    <img src="images/robot.png" width="225px">
-</h1>
+<img src="images/robot.png" width="275" height="205">
+
+## Confira no link a execução dos testes no [Browserstack.](https://app-automate.browserstack.com/dashboard/v2/public-build/bXpVNDluVmRUWXVFOUFicUE5cW0vdzNPRzZ4V1d0Mi92eUJtYVFkZzJLcm8xdEFZL2haelpyUmROWEtTU1RON1dZcVd5VVloNjBYTUJGcERVYStRL3c9PS0tdEVNb01YdllVU21WUlJFYVZSb0Jzdz09--9fb634888cdee1919e9b4d0cc692a833a5fac3d2)
 
 ## Pré-requisitos de ambiente 📋 💻
 
@@ -12,7 +12,7 @@
 
 [Python](https://www.python.org/downloads/) 3.10.12.
 
-[Android Studio](https://developer.android.com/studio) Giraffe.
+[Android Studio](https://developer.android.com/studio).
 
 ```
 npm install -g appium@2.1.3
@@ -44,7 +44,7 @@ appium driver install uiautomator2
 
 ## Comandos para checagem do ambiente ✅ ✅
 
-* Se ambiente está OK: **`appium-doctor --android`**
+* Se o ambiente está OK: **`appium-doctor --android`**
 
 * Se o driver está instalado: **`appium driver list --installed`**
 
