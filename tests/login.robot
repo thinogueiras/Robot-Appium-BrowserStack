@@ -25,7 +25,7 @@ Deve logar com sucesso
 
     Wait Until Screen Contains        Boas vindas, logado você está.
 
-Não deve logar com senha incorreta
+Deve validar senha incorreta ao tentar logar
     Navigate To             Formulários
 
     Go To Item              Login            

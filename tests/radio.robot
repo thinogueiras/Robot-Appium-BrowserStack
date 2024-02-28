@@ -6,7 +6,7 @@ Test Setup                  Start Session
 Test Teardown               Finish Session
 
 *** Test Cases ***
-Deve selecionar a opção Python
+Deve selecionar a opcao Python
     Navigate To             Check e Radio
     Go To Item              Botões de radio        
     

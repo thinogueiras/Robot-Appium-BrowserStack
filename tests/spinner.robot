@@ -6,7 +6,7 @@ Test Setup                  Start Session
 Test Teardown               Finish Session
 
 *** Test Cases ***
-Deve escolher o nível Jedi
+Deve escolher o nivel Jedi
     Navigate To             Formulários
     Go To Item              Cadastro
     
