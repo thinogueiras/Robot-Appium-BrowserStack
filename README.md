@@ -1,8 +1,6 @@
 # Automação de testes Mobile com Robot Framework e Appium.
 
-<p align="left">
-    <img src="images/robot.png" width="275px">
-</p>
+[![BrowserStack Tests](https://github.com/thinogueiras/Robot-Appium-Tests/actions/workflows/browserStack-ci.yml/badge.svg?branch=main)](https://github.com/thinogueiras/Robot-Appium-Tests/actions/workflows/browserStack-ci.yml)
 
 ## Pré-requisitos mínimos de ambiente:
 
@@ -67,11 +65,11 @@ browserstack-sdk setup --framework "robot" --username "<YOUR_BROWSERSTACK_USERNA
 
 - Inicie o Appium Server com o comando: **`appium`**.
 
-![Alt text](images/appium.png)
+![Alt text](.github/images/appium.png)
 
 - Dê um play no Android Device Virtual.
 
-![Alt text](images/avd.png)
+![Alt text](.github/images/avd.png)
 
 
 ## Execução dos testes 🤖 🤖
@@ -93,6 +91,22 @@ browserstack-sdk robot -d ./reports tests/
 ## Relatórios 📝 📄
 
 Verifique a pasta `reports` para visualizar os <b>relatórios</b> da execução: `report.html` ou `log.html`.
+
+---
+
+## Sobre a integração com o BrowserStack:
+
+<p>
+    <img src=".github/images/browserstack-logo.png" width="375px">
+</p>
+
+### Execuções disparadas automaticamente pelo pipeline do `GitHub Actions`:
+
+![alt text](.github/images/browserstack-tests.png)
+
+### Observabilidade dos Testes:
+
+![alt text](.github/images/observabilidade.png)
 
 ---
 
