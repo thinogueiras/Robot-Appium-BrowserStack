@@ -7,6 +7,8 @@ Test Teardown               Finish Session
 
 *** Test Cases ***
 Deve marcar as techs que usam Appium
+    [Tags]                  browserstack
+
     Navigate To             Check e Radio
     Go To Item              Checkbox
     

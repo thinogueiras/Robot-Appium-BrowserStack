@@ -7,6 +7,8 @@ Test Teardown               Finish Session
 
 *** Test Cases ***
 Deve arrastar o Luke Skywalker para o topo da lista
+    [Tags]                  browserstack
+
     Navigate To             Star Wars
 
     Go To Item              Lista        

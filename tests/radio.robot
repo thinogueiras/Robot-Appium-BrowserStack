@@ -7,6 +7,8 @@ Test Teardown               Finish Session
 
 *** Test Cases ***
 Deve selecionar a opcao Python
+    [Tags]                  browserstack
+
     Navigate To             Check e Radio
     Go To Item              Botões de radio        
     
