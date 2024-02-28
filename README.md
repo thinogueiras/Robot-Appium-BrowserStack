@@ -15,7 +15,7 @@
 [Android Studio](https://developer.android.com/studio).
 
 ```
-npm install -g appium@2.5.1
+npm install -g appium@2.1.3
 ```
 
 ```
@@ -23,8 +23,9 @@ npm install -g appium-doctor
 ```
 
 ```
-appium driver install uiautomator2@3.0.1
+appium driver install uiautomator2@2.29.4
 ```
+
 ### Necessário configurar o **`ANDROID_HOME`** e **`JAVA_HOME`** no **`PATH`** do S.O.
 
 ### Pelo ***Virtual Device Manager*** do ***Android Studio***, crie um device.
