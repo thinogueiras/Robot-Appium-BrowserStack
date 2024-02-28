@@ -1,2 +1,6 @@
 robotframework
 robotframework-appiumlibrary
+robotframework-pabot
+selenium==4.11.0
+Appium-Python-Client==2.11.1
+browserstack-sdk
