@@ -1,21 +1,21 @@
 # Automação de testes Mobile com Robot Framework e Appium.
 
-<img src="images/robot.png" width="275" height="205">
+<p align="left">
+    <img src="images/robot.png" width="275px">
+</p>
 
-## Confira no link a execução dos testes no [Browserstack.](https://app-automate.browserstack.com/dashboard/v2/public-build/bXpVNDluVmRUWXVFOUFicUE5cW0vdzNPRzZ4V1d0Mi92eUJtYVFkZzJLcm8xdEFZL2haelpyUmROWEtTU1RON1dZcVd5VVloNjBYTUJGcERVYStRL3c9PS0tdEVNb01YdllVU21WUlJFYVZSb0Jzdz09--9fb634888cdee1919e9b4d0cc692a833a5fac3d2)
+## Pré-requisitos mínimos de ambiente:
 
-## Pré-requisitos de ambiente 📋 💻
+[Java](https://www.oracle.com/br/java/technologies/downloads/#java11) 11.0.x.
 
-[Java](https://www.oracle.com/br/java/technologies/downloads/#java11) 11.0.20.
+[Node.js](https://nodejs.org/en) 18.17.x.
 
-[Node.js](https://nodejs.org/en) 18.17.1.
-
-[Python](https://www.python.org/downloads/) 3.10.12.
+[Python](https://www.python.org/downloads/) 3.10.x.
 
 [Android Studio](https://developer.android.com/studio).
 
 ```
-npm install -g appium@2.1.3
+npm install -g appium@2.5.1
 ```
 
 ```
@@ -23,7 +23,7 @@ npm install -g appium-doctor
 ```
 
 ```
-appium driver install uiautomator2
+appium driver install uiautomator2@3.0.1
 ```
 ### Necessário configurar o **`ANDROID_HOME`** e **`JAVA_HOME`** no **`PATH`** do S.O.
 
@@ -42,21 +42,27 @@ appium driver install uiautomator2
 }
 ```
 
-## Comandos para checagem do ambiente ✅ ✅
+## Comandos extras para checagem do ambiente:
 
 * Se o ambiente está OK: **`appium-doctor --android`**
 
-* Se o driver está instalado: **`appium driver list --installed`**
+* Verificar drivers instalados: **`appium driver list --installed`**
 
 * Se o virtual device está ativo / online: **`adb devices`**
 
-## Instalação do projeto 🚀 🚀
+## Instalação do projeto:
 
 ```
 pip install -r requirements.txt
 ```
 
-## Instruções 📢 ℹ️ 
+## Setup BrowserStack (Opcional):
+
+```
+browserstack-sdk setup --framework "robot" --username "<YOUR_BROWSERSTACK_USERNAME>" --key "<YOUR_BROWSERSTACK_ACCESS_KEY>"
+```
+
+## Instruções:
 
 - Inicie o Appium Server com o comando: **`appium`**.
 
@@ -66,22 +72,31 @@ pip install -r requirements.txt
 
 ![Alt text](images/avd.png)
 
+
 ## Execução dos testes 🤖 🤖
 
+### Local:
+
 ```
-robot -d ./logs tests/
-``````
+robot -d ./reports tests/
+```
+
+### BrowserStack:
+
+```
+browserstack-sdk robot -d ./reports tests/
+```
+
+---
 
 ## Relatórios 📝 📄
 
-Verifique a pasta `logs` para visualizar os <b>relatórios</b> da execução.
-
-Abra o arquivo `report.html` ou `log.html` que é mais detalhado.
+Verifique a pasta `reports` para visualizar os <b>relatórios</b> da execução: `report.html` ou `log.html`.
 
 ---
 
 <a href="https://www.linkedin.com/in/thinogueiras"><img alt="Linkedin" src="https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white"></a>
 
-<strong>Thiago Nogueira dos Santos</strong> 🤓 🫰🏽
+<strong>Thiago Nogueira dos Santos</strong> 🤓 ✌🏻
 
 QA Automation Engineer 🔎 🐞
