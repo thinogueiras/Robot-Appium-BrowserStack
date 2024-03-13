@@ -3,6 +3,8 @@ name: BrowserStack Tests
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   tests:
@@ -12,6 +14,11 @@ jobs:
     steps:
     - name: Checkout 🚀🚀
       uses: actions/checkout@v4
+
+    - name: Setup Python 🔧🔧
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
 
     - name: Install dependencies ➕➕ 
       run: pip install -r requirements.txt
@@ -25,11 +32,11 @@ jobs:
     - name: Run tests 🧪🧪
       run: browserstack-sdk robot -d ./reports -i browserstack tests/
 
-    - name: Upload Reports 📖📖
+    - name: Publish Robot Reports 📄📄
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: Reports
+        name: Robot-Reports
         path: reports
         retention-days: 90
         if-no-files-found: warn
@@ -57,3 +64,23 @@ jobs:
         SLACK_TITLE: 'Some tests failed'
         SLACK_MESSAGE: ':fire:  Tests failed  :fire:'
         SLACK_USERNAME: FAILURE
+
+  reports:
+    if: always()
+    needs: [tests] 
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    name: Reports 📄📄
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Robot Reports
+        uses: actions/download-artifact@v4
+        with:
+          name: Robot-Reports
+          path: reports
+
+      - name: Send report to commit
+        uses: joonvena/robotframework-reporter-action@v2.4
+        with:
+          gh_access_token: ${{ secrets.GITHUB_TOKEN }}

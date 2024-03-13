@@ -1,6 +1,6 @@
 # Automação de testes Mobile com Robot Framework e Appium.
 
-[![BrowserStack Tests](https://github.com/thinogueiras/Robot-Appium-Tests/actions/workflows/browserStack-ci.yml/badge.svg?branch=main)](https://github.com/thinogueiras/Robot-Appium-Tests/actions/workflows/browserStack-ci.yml)
+[![BrowserStack Tests](https://github.com/thinogueiras/Robot-Appium-BrowserStack/actions/workflows/browserstack-testing.yml/badge.svg?branch=main)](https://github.com/thinogueiras/Robot-Appium-Tests/actions/workflows/browserstack-testing.yml)
 
 ## Pré-requisitos mínimos de ambiente:
 
@@ -8,7 +8,7 @@
 
 [Node.js](https://nodejs.org/en) 18.17.x.
 
-[Python](https://www.python.org/downloads/) 3.10.x.
+[Python](https://www.python.org/downloads/) 3.11.x.
 
 [Android Studio](https://developer.android.com/studio).
 
